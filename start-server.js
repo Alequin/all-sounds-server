@@ -6,6 +6,8 @@ const express = require("express");
 const lookupAudio = require("./audio/lookup-audio");
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 app.get("/sound/:audioToPlay", (req, res) => {
   const { audioToPlay } = req.params;
   if (!audioToPlay) return res.status(404).send("Unknown audio");
@@ -22,6 +24,6 @@ app.get("/sound/:audioToPlay", (req, res) => {
   readStream.pipe(res);
 });
 
-app.listen(3000, () => {
-  console.log("started");
+app.listen(port, () => {
+  console.log(`started on port ${port}`);
 });
