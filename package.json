@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./start-server",
+    "update-lookup-map": "node ./audio/make-audio-lookup-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

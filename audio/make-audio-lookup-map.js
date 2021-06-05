@@ -29,4 +29,4 @@ const makeAudioLookupMap = () => {
   fs.writeFileSync(outputDirectory, JSON.stringify(audioLookupMap));
 };
 
-module.exports = makeAudioLookupMap;
+makeAudioLookupMap();

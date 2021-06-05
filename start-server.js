@@ -1,6 +1,3 @@
-// re-create json lookup file on server start
-require("./audio/make-audio-lookup-map");
-
 const fs = require("fs");
 const express = require("express");
 const lookupAudio = require("./audio/lookup-audio");
