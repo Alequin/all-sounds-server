@@ -10,6 +10,7 @@ app.get("/sound/:audioToPlay", (req, res) => {
   if (!audioToPlay) return res.status(404).send("Unknown audio");
 
   var filePath = lookupAudio(audioToPlay);
+  if (!fs.existsSync(filePath)) return res.status(404).send("Unknown audio");
   var stat = fs.statSync(filePath);
 
   res.writeHead(200, {
